@@ -108,6 +108,7 @@ class _CalculatorAppState extends State<CalculatorApp> {
     setState(() {
       isProgress = false;
       textToDisplay = res;
+
     });
   }
 

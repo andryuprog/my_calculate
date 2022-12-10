@@ -12,13 +12,13 @@ class TwoPages extends StatefulWidget {
 class _TwoPagesState extends State<TwoPages> {
   late String text;
 
-  final List<OperationFile> events = [
-    OperationFile(id: 1, operation: 'operation', dataTime: 'dataTime'),
-    OperationFile(id: 2, operation: 'operation', dataTime: 'dataTime'),
-    OperationFile(id: 3, operation: 'operation', dataTime: 'dataTime'),
-    OperationFile(id: 4, operation: 'operation', dataTime: 'dataTime'),
-    OperationFile(id: 5, operation: 'operation', dataTime: 'dataTime'),
-    OperationFile(id: 6, operation: 'operation', dataTime: 'dataTime'),
+  final List<Operations> events = [
+    Operations(id: 1, operation: 'operation', dataTime: 'dataTime'),
+    Operations(id: 2, operation: 'operation', dataTime: 'dataTime'),
+    Operations(id: 3, operation: 'operation', dataTime: 'dataTime'),
+    Operations(id: 4, operation: 'operation', dataTime: 'dataTime'),
+    Operations(id: 5, operation: 'operation', dataTime: 'dataTime'),
+    Operations(id: 6, operation: 'operation', dataTime: 'dataTime'),
   ];
 
   @override

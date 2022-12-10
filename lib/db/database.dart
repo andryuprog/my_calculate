@@ -41,34 +41,34 @@ class DBProvider {
 
   //READ
 
-  Future<List<OperationFile>> getOperation() async {
+  Future<List<Operations>> getOperation() async {
     Database db = await database;
     final List<Map<String, dynamic>> operationMapList =
         await db.query(operationTable);
-    final List<OperationFile> operationList = [];
+    final List<Operations> operationList = [];
     for (var operationMap in operationMapList) {
-      operationList.add(OperationFile.fromMap(operationMap));
+      operationList.add(Operations.fromMap(operationMap));
     }
     return operationList;
   }
 
   // INSERT
 
-  Future<OperationFile> insertOperation(OperationFile operationFile) async {
+  Future<Operations> insertOperation(Operations Operations) async {
     Database db = await database;
-    operationFile.id = await db.insert(operationTable, operationFile.toMap());
-    return operationFile;
+    Operations.id = await db.insert(operationTable, Operations.toMap());
+    return Operations;
   }
 
   //UPDATE
 
-  Future<int> updateOperation(OperationFile operationFile) async {
+  Future<int> updateOperation(Operations Operations) async {
     Database db = await database;
     return await db.update(
       operationTable,
-      operationFile.toMap(),
+      Operations.toMap(),
       where: '$columnId = ?',
-      whereArgs: [operationFile.id],
+      whereArgs: [Operations.id],
     );
   }
 

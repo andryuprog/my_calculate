@@ -1,10 +1,10 @@
 //TODO: remove id
-class OperationFile {
+class Operations {
   int? id;
   String ?operation;
   String ?dataTime;
 
-  OperationFile({this.id, this.operation, this.dataTime});
+  Operations({this.id, this.operation, this.dataTime});
 
   Map<String, dynamic> toMap() {
     final map = <String, dynamic>{};
@@ -14,7 +14,7 @@ class OperationFile {
     return map;
   }
 
-  OperationFile.fromMap(Map<String, dynamic> map) {
+  Operations.fromMap(Map<String, dynamic> map) {
     id = map['id'];
     operation = map['operation'];
     dataTime = map['dataTime'];
